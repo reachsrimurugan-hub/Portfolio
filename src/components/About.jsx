@@ -123,7 +123,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="sub-sections">
+        <div id="journey" className="sub-sections">
           <div className="sub-section education">
             <h3>Education & Experience</h3>
             <div className="timeline">

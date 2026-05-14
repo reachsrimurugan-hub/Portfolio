@@ -1,0 +1,83 @@
+.collaborate-section {
+  padding: 120px 0;
+  background-color: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a subtle top border that doesn't span full width for a premium look */
+.collaborate-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.collaborate-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.collaborate-header {
+  font-size: 3.5rem;
+  font-weight: 700;
+  max-width: 800px;
+  line-height: 1.1;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.collaborate-button {
+  padding: 24px 56px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.5s var(--transition-smooth);
+}
+
+@media (max-width: 1024px) {
+  .collaborate-header {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .collaborate-section {
+    padding: 80px 0;
+  }
+
+  .collaborate-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .collaborate-header {
+    font-size: 2.8rem;
+    max-width: 100%;
+  }
+
+  .collaborate-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px 40px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .collaborate-header {
+    font-size: 2.2rem;
+  }
+}
