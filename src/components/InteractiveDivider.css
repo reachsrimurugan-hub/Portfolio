@@ -1,0 +1,111 @@
+.interactive-divider {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.liquid-bg {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 70%);
+  filter: blur(100px);
+  z-index: 1;
+}
+
+.noise-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+  opacity: 0.05;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.horizontal-line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  animation: slideLine 10s infinite linear;
+}
+
+@keyframes slideLine {
+  0% { transform: translateY(-100px); opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { transform: translateY(100px); opacity: 0; }
+}
+
+.divider-text-container {
+  z-index: 3;
+  text-align: center;
+}
+
+.divider-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.divider-text span {
+  font-size: 12vw;
+  line-height: 0.8;
+  color: #fff;
+  display: block;
+  transition: transform 0.1s linear;
+}
+
+.divider-text .bold {
+  font-weight: 900;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -5px;
+}
+
+.divider-text .italic {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(255,255,255,0.8);
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.p-0 { width: 5px; height: 5px; top: 20%; left: 10%; animation: float 15s infinite; }
+.p-1 { width: 3px; height: 3px; top: 60%; left: 80%; animation: float 20s infinite; }
+/* ... add more particles as needed ... */
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(50px, -50px); }
+}
+
+@media (max-width: 768px) {
+  .divider-text span {
+    font-size: 18vw;
+  }
+}
