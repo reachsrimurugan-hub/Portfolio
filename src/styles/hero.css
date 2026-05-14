@@ -25,7 +25,7 @@
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: var(--text-secondary);
+  color: var(--text-secondar);
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
@@ -34,8 +34,10 @@
 .hero-subtitle::before {
   content: '';
   width: 30px;
-  height: 2px; /* Thicker line */
-  background-color: var(--accent);
+  height: 2px;
+  /* Thicker line */
+  background-color: #00ff88;
+  /* Premium Green */
   margin-right: 1rem;
 }
 
@@ -62,7 +64,8 @@
 }
 
 .hero-domains-container {
-  height: 2.5rem; /* Fixed height to prevent layout shifts */
+  height: 2.5rem;
+  /* Fixed height to prevent layout shifts */
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
@@ -90,8 +93,15 @@
 }
 
 @keyframes blink {
-  from, to { opacity: 1; }
-  50% { opacity: 0; }
+
+  from,
+  to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 @media (max-width: 992px) {
@@ -217,14 +227,16 @@
 
   .hero-left {
     width: 100%;
-    order: 2; /* Text below */
+    order: 2;
+    /* Text below */
     align-items: center;
     margin-bottom: 3rem;
   }
 
   .hero-right {
     width: 100%;
-    order: 1; /* Portrait on top */
+    order: 1;
+    /* Portrait on top */
     height: 60vh;
     min-height: 400px;
   }
@@ -235,7 +247,7 @@
   }
 
   .hero-subtitle::before {
-    background-color: var(--accent);
+    background-color: #00ff88;
     width: 20px;
   }
 
@@ -252,9 +264,11 @@
   }
 
   .portrait-pill-container {
-    width: 90%; /* Larger on mobile */
+    width: 90%;
+    /* Larger on mobile */
     height: 90%;
-    border-radius: 50%; /* More circular as in image */
+    border-radius: 50%;
+    /* More circular as in image */
   }
 
   .portrait-name {
@@ -265,7 +279,8 @@
   .hero-cta {
     padding: 1rem 2rem;
     font-size: 0.75rem;
-    border-radius: 50px; /* Pill button */
+    border-radius: 50px;
+    /* Pill button */
   }
 }
 

@@ -118,8 +118,7 @@ const About = () => {
 
           <div className="about-visual">
             <div className="image-wrapper" ref={imageRef}>
-              <img src="/assets/about_portrait.png" alt="Portrait" className="portrait-img" loading="lazy" />
-              <div className="glass-card-overlay"></div>
+              <img src={getImageUrl('about.png')} alt="about" className="about-img" loading="lazy" />
             </div>
           </div>
         </div>
@@ -146,7 +145,7 @@ const About = () => {
           </div>
 
           <div className="sub-section certificates">
-            <h3>Certificates</h3>
+            <h3>View Certificates</h3>
             <div className="certs-grid">
               {certificates.map((cert, index) => (
                 <motion.div 
