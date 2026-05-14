@@ -18,9 +18,8 @@ const Contact = () => {
             <div className="info-column">
               <h3>SOCIAL</h3>
               <ul>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">GitHub</a></li>
+                <li><a href="linkedin.com/in/srimurugan-s-00835a37a">LinkedIn</a></li>
+                <li><a href="https://github.com/reachsrimurugan-hub">GitHub</a></li>
               </ul>
             </div>
             
@@ -30,7 +29,7 @@ const Contact = () => {
                 <li><a href="mailto:Reach.srimurugan@gmail.com">Reach.srimurugan@gmail.com</a></li>
                 <li><a href="tel:+1234567890">+91 7904195589</a></li>
                 <li>Location: Coimbatore, Tamil Nadu</li>
-                <li><a href="#">View Portfolio PDF</a></li>
+                
               </ul>
             </div>
           </div>
