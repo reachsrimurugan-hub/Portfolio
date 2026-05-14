@@ -19,7 +19,7 @@ const Hero = () => {
   useEffect(() => {
     const handleTyping = () => {
       const currentFullText = domains[domainIndex];
-      
+
       if (isDeleting) {
         setDisplayText(prev => prev.substring(0, prev.length - 1));
         setSpeed(30);
