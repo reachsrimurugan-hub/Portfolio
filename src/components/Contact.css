@@ -94,7 +94,7 @@
 
 .contact-text {
   font-family: var(--font-serif);
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
   font-weight: 400;
   color: #fff;
 }

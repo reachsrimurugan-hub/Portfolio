@@ -16,6 +16,7 @@ const projects = [
     title: 'Revivo Podcast Website',
     category: 'Full Stack Application',
     imageMain: getImageUrl('PodcastList.png'),
+    imageMobile: getImageUrl('PodcastList(mobile).png'),
     imageSub1: getImageUrl('PodcastDetails.png'),
     imageSub2: getImageUrl('SearchResults.png'),
     githubLink: 'https://github.com/reachsrimurugan-hub/REVIVO-PODCAST-WEBSITE', // Replace with your actual GitHub link
@@ -25,6 +26,7 @@ const projects = [
     title: 'Nexus Ecommerce',
     category: 'Mobile Application',
     imageMain: getImageUrl('homepage.png'),
+    imageMobile: getImageUrl('homepage(mobile).png'),
     imageSub1: getImageUrl('products.png'),
     imageSub2: getImageUrl('cart.png'),
     githubLink: 'https://github.com/reachsrimurugan-hub/Nexus-ecommerce-website', // Replace with your actual GitHub link
@@ -36,7 +38,7 @@ const Projects = () => {
 
   useEffect(() => {
     const cards = gsap.utils.toArray('.project-card');
-    
+
     cards.forEach((card, i) => {
       const isLast = i === cards.length - 1;
       ScrollTrigger.create({
@@ -87,7 +89,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="header-right">
-                  <button 
+                  <button
                     className="live-btn"
                     onClick={() => window.open(project.githubLink, '_blank', 'noopener,noreferrer')}
                   >
@@ -98,7 +100,10 @@ const Projects = () => {
 
               <div className="card-content">
                 <div className="main-image-box">
-                  <img src={project.imageMain} alt={project.title} className="main-img" loading="lazy" />
+                  <picture>
+                    <source media="(max-width: 600px)" srcSet={project.imageMobile} />
+                    <img src={project.imageMain} alt={project.title} className="main-img" loading="lazy" />
+                  </picture>
                   <div className="shine-effect"></div>
                 </div>
                 <div className="sub-images-box">

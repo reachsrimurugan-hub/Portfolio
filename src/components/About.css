@@ -238,6 +238,25 @@
   .container {
     padding: 0 20px;
   }
+
+  .line-1 { 
+    width: 400px; 
+    height: 400px; 
+    top: -50px; 
+    left: -100px; 
+  }
+  .line-2 { 
+    width: 300px; 
+    height: 300px; 
+    bottom: -50px; 
+    right: -50px; 
+  }
+  .line-3 { 
+    width: 500px; 
+    height: 500px; 
+    top: 30%; 
+    left: 10%; 
+  }
 }
 
 /* Certificate Modal Hover Board */
