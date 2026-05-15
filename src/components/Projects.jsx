@@ -43,7 +43,7 @@ const Projects = () => {
         trigger: card,
         start: 'top top+=10%',
         pin: true,
-        pinSpacing: isLast,
+        pinSpacing: false,
         end: () => `+=${window.innerHeight}`,
         id: `card-${i}`,
       });
@@ -52,8 +52,7 @@ const Projects = () => {
       if (i > 0) {
         gsap.to(cards[i - 1], {
           scale: 0.9,
-          opacity: 0.5,
-          filter: 'blur(5px)',
+          opacity: 0.3,
           scrollTrigger: {
             trigger: card,
             start: 'top top+=10%',

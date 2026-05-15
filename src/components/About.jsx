@@ -112,7 +112,7 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="bio-text"
             >
-              Focused on clean visuals, immersive interfaces, and refined user experiences.
+               Skilled in frontend architecture, UI/UX design, animation systems, and Building AI-powered web experiences with clean interfaces and seamless user interactions.
             </motion.div>
           </div>
 
