@@ -11,8 +11,18 @@ const getImageUrl = (name) => {
 };
 
 const projects = [
-  {
+ {
     id: '01',
+    title: 'PlayVerse Streaming Platform',
+    category: 'Mobile Application',
+    imageMain: getImageUrl('home.png'),
+    imageMobile: getImageUrl('playverse(mobile).png'),
+    imageSub1: getImageUrl('sidebar.png'),
+    imageSub2: getImageUrl('videoplayer.png'),
+    githubLink: 'https://github.com/reachsrimurugan-hub/playverse.git', // Replace with your actual GitHub link
+  }, 
+  {
+    id: '02',
     title: 'Revivo Podcast Website',
     category: 'Full Stack Application',
     imageMain: getImageUrl('PodcastList.png'),
@@ -21,16 +31,7 @@ const projects = [
     imageSub2: getImageUrl('SearchResults.png'),
     githubLink: 'https://github.com/reachsrimurugan-hub/REVIVO-PODCAST-WEBSITE', // Replace with your actual GitHub link
   },
-  {
-    id: '02',
-    title: 'Nexus Ecommerce',
-    category: 'Mobile Application',
-    imageMain: getImageUrl('homepage.png'),
-    imageMobile: getImageUrl('homepage(mobile).png'),
-    imageSub1: getImageUrl('products.png'),
-    imageSub2: getImageUrl('cart.png'),
-    githubLink: 'https://github.com/reachsrimurugan-hub/Nexus-ecommerce-website', // Replace with your actual GitHub link
-  }
+  
 ];
 
 const Projects = () => {
