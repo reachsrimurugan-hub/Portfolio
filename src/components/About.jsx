@@ -19,7 +19,7 @@ const About = () => {
 
   useEffect(() => {
     const section = sectionRef.current;
-    
+
     // Background parallax lines
     gsap.to('.contour-line', {
       y: -100,
@@ -38,7 +38,7 @@ const About = () => {
       const { left, top, width, height } = imageRef.current.getBoundingClientRect();
       const x = (clientX - left - width / 2) / 25;
       const y = (clientY - top - height / 2) / 25;
-      
+
       gsap.to(imageRef.current, {
         x: x,
         y: y,
@@ -58,13 +58,14 @@ const About = () => {
   }, []);
 
   const tools = [
-    'Figma', 'React', 'GitHub'
+    'Figma', 'Firebase', 'GitHub', 'GCloud', 'Docker', ''
   ];
 
   const certificates = [
     { name: 'Frontend App With React', image: getImageUrl('react.jpeg') },
     { name: 'System Administartion', image: getImageUrl('Admin.png') },
-    { name: 'Advanced Git/GitHub', image: getImageUrl('Git.png') }, 
+    { name: 'Advanced Git/GitHub', image: getImageUrl('Git.png') },
+    { name: 'Frontend Developer Intern', image: getImageUrl('intern.png') },
   ];
 
   const education = [
@@ -72,6 +73,11 @@ const About = () => {
       degree: 'Bsc Computer Science with Cognitive System',
       institution: 'Sri Krishna College Of Arts and Science',
       year: '2024 - 2027',
+    },
+    {
+      degree: 'Frontend Developer Intern ',
+      institution: 'Rezilyens',
+      year: '2026',
     }
   ];
 
@@ -88,7 +94,7 @@ const About = () => {
       <div className="container" ref={containerRef}>
         <div className="about-grid">
           <div className="about-content">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -96,23 +102,23 @@ const About = () => {
             >
               ABOUT ME
             </motion.h2>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="intro-para"
             >
-              Building modern digital experiences through design, motion, and interaction.
+              Building scalable web applications with modern technologies.
             </motion.p>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="bio-text"
             >
-               Skilled in frontend architecture, UI/UX design, animation systems, and Building AI-powered web experiences with clean interfaces and seamless user interactions.
+              I build modern, responsive, and scalable applications with a strong focus on performance, usability, and clean engineering practices.
             </motion.div>
           </div>
 
@@ -128,7 +134,7 @@ const About = () => {
             <h3>Education & Experience</h3>
             <div className="timeline">
               {education.map((item, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="timeline-item"
                   initial={{ opacity: 0, x: -30 }}
@@ -148,7 +154,7 @@ const About = () => {
             <h3>View Certificates</h3>
             <div className="certs-grid">
               {certificates.map((cert, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="cert-card"
                   whileHover={{ y: -10, borderColor: 'rgba(0,0,0,0.4)' }}
@@ -167,7 +173,7 @@ const About = () => {
             <h3>Known Tools</h3>
             <div className="tools-grid">
               {tools.map((tool, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="tool-tag"
                   whileHover={{ scale: 1.1 }}
@@ -185,14 +191,14 @@ const About = () => {
 
       <AnimatePresence>
         {selectedCert && (
-          <motion.div 
+          <motion.div
             className="cert-modal-overlay"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedCert(null)}
           >
-            <motion.div 
+            <motion.div
               className="cert-modal-content"
               initial={{ scale: 0.8, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}

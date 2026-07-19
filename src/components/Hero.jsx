@@ -11,9 +11,9 @@ const Hero = () => {
   const [speed, setSpeed] = useState(80);
 
   const domains = [
-    "UI/UX enthusiast",
-    "Frontend developer",
-    "Creative coder"
+    "UI/UX explorer",
+    "Web Enthusiast",
+    "Devops Learner"
   ];
 
   useEffect(() => {
@@ -74,7 +74,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          AVAILABLE FOR FREELANCE
+          AVAILABLE FOR INTERN
         </motion.div>
 
         <div className="hero-title-container">
@@ -84,7 +84,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="title-bold">CREATIVE</span><br />
+            <span className="title-bold">WEB</span><br />
             <span className="title-serif italic">Developer</span>
           </motion.h1>
 
@@ -94,8 +94,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
-            DESIGNING DIGITAL <br />
-            <span className="title-serif">EXPERIENCES</span>
+            BUILDING MODERN <br />
+            <span className="title-serif">WEB EXPERIENCES</span>
           </motion.h2>
         </div>
 

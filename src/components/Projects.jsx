@@ -11,7 +11,7 @@ const getImageUrl = (name) => {
 };
 
 const projects = [
- {
+  {
     id: '01',
     title: 'PlayVerse Streaming Platform',
     category: 'Mobile Application',
@@ -20,18 +20,18 @@ const projects = [
     imageSub1: getImageUrl('sidebar.png'),
     imageSub2: getImageUrl('videoplayer.png'),
     githubLink: 'https://github.com/reachsrimurugan-hub/playverse.git', // Replace with your actual GitHub link
-  }, 
+  },
   {
     id: '02',
-    title: 'Revivo Podcast Website',
+    title: 'JobLink HyperLocal Jobs',
     category: 'Full Stack Application',
-    imageMain: getImageUrl('PodcastList.png'),
-    imageMobile: getImageUrl('PodcastList(mobile).png'),
-    imageSub1: getImageUrl('PodcastDetails.png'),
-    imageSub2: getImageUrl('SearchResults.png'),
-    githubLink: 'https://github.com/reachsrimurugan-hub/REVIVO-PODCAST-WEBSITE', // Replace with your actual GitHub link
+    imageMain: getImageUrl('Home_jobink.png'),
+    imageMobile: getImageUrl('dashboard.png'),
+    imageSub1: getImageUrl('profile.png'),
+    imageSub2: getImageUrl('alerts.png'),
+    githubLink: 'https://github.com/reachsrimurugan-hub/jobink.git', // Replace with your actual GitHub link
   },
-  
+
 ];
 
 const Projects = () => {
